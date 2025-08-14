@@ -1,17 +1,12 @@
-import { useState } from "react";
 import React from "react";
 
-export default function Search({ search, setSearch }) {
-  const [search, setSearch] = useState;
-
+export default function Search() {
   return (
     <div className="flex border border-gray-400 rounded-2xl overflow-hidden w-80 sm:w-96 mb-4">
       <input
         type="search"
         className="flex-1 px-2 py-1 outline-none"
         placeholder="Buscar..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
       />
       <button className="bg-pink-400 px-4 flex items-center justify-center">
         <svg

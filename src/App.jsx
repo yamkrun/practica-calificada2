@@ -11,7 +11,7 @@ function App() {
       </header>
 
       <main className="flex flex-col justify-center items-center">
-        <Search search={search} setSearch={setSearch} />
+        <Search />
         <section className="grid grid-cols-2 sm:grid-cols-4 mt-6 gap-4">
           <Buttons category={"Mountain"} />
           <Buttons category={"Flowers"} />

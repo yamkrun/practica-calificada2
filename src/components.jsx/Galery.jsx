@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
-import Search from "./Search";
 const accessKey = "QNrvJfOiyPe9TSQS1cXNqb6yoCtweGfbobx0sBiVjQ4";
 export default function Galery() {
   const [images, setImages] = useState([]);
