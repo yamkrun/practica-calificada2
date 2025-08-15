@@ -4,6 +4,7 @@ import Buttons from "./components.jsx/Buttons";
 import Galery from "./components.jsx/Galery";
 
 function App() {
+  const [search1, setSearch1] = useState("");
   return (
     <>
       <header className="flex justify-center items-center">
@@ -11,7 +12,7 @@ function App() {
       </header>
 
       <main className="flex flex-col justify-center items-center">
-        <Search />
+        <Search valorIngreso={search1} setValorIngreso={setSearch1} />
         <section className="grid grid-cols-2 sm:grid-cols-4 mt-6 gap-4">
           <Buttons category={"Mountain"} />
           <Buttons category={"Flowers"} />
@@ -19,7 +20,7 @@ function App() {
           <Buttons category={"Faces"} />
         </section>
         <section>
-          <Galery />
+          <Galery search={search1} />
         </section>
       </main>
 

@@ -2,13 +2,13 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 const accessKey = "QNrvJfOiyPe9TSQS1cXNqb6yoCtweGfbobx0sBiVjQ4";
-export default function Galery() {
+export default function Galery({ search }) {
   const [images, setImages] = useState([]);
-
   useEffect(() => {
+    const search3 = search || "mariposas";
     axios
       .get(
-        `https://api.unsplash.com/search/photos?query=flowers&per_page=24&client_id=${accessKey}`
+        `https://api.unsplash.com/search/photos?query=${search3}&per_page=24&client_id=${accessKey}`
       )
       .then((res) => {
         setImages(res.data.results);
@@ -17,7 +17,7 @@ export default function Galery() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [search]);
 
   return (
     <div>
