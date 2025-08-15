@@ -4,7 +4,7 @@ export default function Buttons({ categoryName, setCategory }) {
   return (
     <div>
       <button
-        className="bg-pink-400 rounded-2xl py-1 px-2.5 font-bold text-gray-700 w-[100px]"
+        className="bg-pink-400 rounded-2xl py-1 px-2.5 font-bold text-gray-700 w-[100px] cursor-pointer hover:scale-110 hover:bg-pink-300"
         onClick={(e) => setCategory(categoryName)}
       >
         <p>{categoryName}</p>
